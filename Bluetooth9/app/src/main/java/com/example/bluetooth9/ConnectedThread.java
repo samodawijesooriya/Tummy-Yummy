@@ -15,7 +15,6 @@ public class ConnectedThread extends Thread {
     private static final String TAG = "FrugalLogs";
     private final BluetoothSocket mmSocket;
     private final InputStream mmInStream;
-    private final OutputStream mmOutStream;
     private String valueRead;
 
     public ConnectedThread(BluetoothSocket socket) {
@@ -38,7 +37,6 @@ public class ConnectedThread extends Thread {
         //Input and Output streams members of the class
         //We wont use the Output stream of this project
         mmInStream = tmpIn;
-        mmOutStream = tmpOut;
     }
 
     public String getValueRead(){
